@@ -1,0 +1,160 @@
+@import url('theme.css');
+
+/* --- Header --- */
+.main-header {
+    background: var(--color-white);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-background-soft);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-green);
+}
+
+.main-header .logo img {
+    height: 40px;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background-color: var(--color-background-soft);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.btn-large {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+}
+
+/* --- About & How It Works Sections --- */
+.about-section, .how-it-works-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about-section h2, .how-it-works-section h2 {
+    font-size: 2.5rem;
+    color: var(--color-text-green);
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
+}
+
+.how-it-works-section {
+    background-color: var(--color-white);
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.step {
+    flex-basis: 30%;
+    min-width: 280px;
+}
+
+.step-icon {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--color-text-dark);
+}
+
+.step p {
+    color: var(--color-secondary);
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--color-text-dark);
+    color: var(--color-white);
+    text-align: center;
+    padding: 20px 0;
+}
+/* --- Call to Action Section --- */
+.cta-section {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 60px 20px;
+}
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+.cta-section .btn-primary {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+/* --- Problem Section --- */
+.problem-section {
+    background-color: var(--color-white);
+    text-align: center;
+    padding: 80px 20px;
+}
+.problem-section h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+.problem-section .statistic {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+    border-left: 5px solid var(--color-accent);
+    padding-left: 15px;
+    display: inline-block;
+}
+.problem-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+}

@@ -67,12 +67,10 @@
                             <ul>
                                 <li><strong>Handwashing:</strong> Wash your hands thoroughly with soap and water for at least 20 seconds before and after handling any food containers.</li>
                                 <li><strong>Temperature Control:</strong> Keep hot foods hot and cold foods cold. Transport them in insulated bags if possible and deliver them promptly. The "danger zone" for bacterial growth is between 4°C and 60°C.</li>
-                                <li><strong>Cross-Contamination:</strong> Never let raw meat or its juices come into contact with ready-to-eat foods.</li>
-                                <li><strong>Check for Spoilage:</strong> Do not collect or deliver any food that shows obvious signs of spoilage, such as mold, strange odors, or discoloration. Report this in your quality check.</li>
+                                <li><strong>Check for Spoilage:</strong> Do not collect or deliver any food that shows obvious signs of spoilage, such as mold or strange odors. Report this in your quality check.</li>
                             </ul>
                         </div>
                     </div>
-
                     <div class="accordion-item">
                         <div class="accordion-header">
                             <h4><i class="fas fa-box"></i> Packaging & Transport</h4>
@@ -83,27 +81,8 @@
                             <p>Proper handling during transport prevents spills and maintains food integrity.</p>
                              <ul>
                                 <li><strong>Use Clean Containers:</strong> Only accept food that is packed in clean, sturdy, and food-grade containers.</li>
-                                <li><strong>Ensure Proper Sealing:</strong> Check that all lids are securely fastened to prevent leaks. Report any poorly sealed containers in your quality check.</li>
-                                <li><strong>Labeling:</strong> If possible, confirm with the donor if the food contains major allergens (like nuts, dairy, gluten) and that it's noted.</li>
-                                <li><strong>Secure in Vehicle:</strong> Place containers in a stable position in your vehicle (e.g., on the floor or in a box) to prevent them from tipping over during transit.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            <h4><i class="fas fa-comments"></i> Donor & Receiver Etiquette</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="accordion-content">
-                           <h5>Representing Anna Setu</h5>
-                           <p>You are the face of our organization. Professionalism and kindness are essential.</p>
-                            <ul>
-                                <li><strong>Be Punctual:</strong> Arrive at the scheduled pickup and delivery times. If you are running late, inform the contact person if a number is provided.</li>
-                                <li><strong>Introduce Yourself:</strong> Clearly state your name and that you are a volunteer with Anna Setu.</li>
-                                <li><strong>Be Courteous:</strong> Be polite, patient, and respectful in all your interactions. A simple "thank you" goes a long way.</li>
-                                <li><strong>Maintain Confidentiality:</strong> Respect the privacy of both the donors and the receivers. Do not share personal details or stories without permission.</li>
-                                <li><strong>Report Issues Professionally:</strong> If there are any issues (e.g., food quality concerns, communication problems), note them in your quality check remarks or contact an admin directly. Do not engage in arguments.</li>
+                                <li><strong>Ensure Proper Sealing:</strong> Check that all lids are securely fastened to prevent leaks.</li>
+                                <li><strong>Secure in Vehicle:</strong> Place containers in a stable position in your vehicle to prevent them from tipping over during transit.</li>
                             </ul>
                         </div>
                     </div>
@@ -113,7 +92,42 @@
     </div>
     
     <div id="qualityCheckModal" class="modal">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h2>Food Quality Check</h2>
+                <button class="close-btn">&times;</button>
+            </header>
+            <form id="qualityCheckForm">
+                <div class="modal-body">
+                    <p>Before marking as "Picked Up," please confirm the quality of the donation.</p>
+                    <div class="form-group">
+                        <label for="foodQuality">Overall Food Quality</label>
+                        <select id="foodQuality" required>
+                            <option value="Good">Good</option>
+                            <option value="Average">Average</option>
+                            <option value="Poor">Poor</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="packaging">Packaging Condition</label>
+                        <select id="packaging" required>
+                            <option value="Good">Good</option>
+                            <option value="Average">Average</option>
+                            <option value="Poor">Poor</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="remarks">Remarks (Optional)</label>
+                        <textarea id="remarks" rows="3" placeholder="Any additional comments..."></textarea>
+                    </div>
+                </div>
+                <footer class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-btn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit & Mark as Picked Up</button>
+                </footer>
+            </form>
         </div>
+    </div>
     
     <div id="notification"></div>
     <script src="js/volunteerDashboard.js"></script>
