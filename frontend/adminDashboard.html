@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Anna Setu</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/adminDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/logo.png" alt="Anna Setu Logo" class="sidebar-logo">
+                <h2 class="sidebar-title">ADMIN</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-target="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                <a href="#" class="nav-item" data-target="approvals"><i class="fas fa-user-check"></i> Approvals</a>
+                <a href="#" class="nav-item" data-target="donations"><i class="fas fa-box-open"></i> Donations</a>
+                <a href="#" class="nav-item" data-target="tasks"><i class="fas fa-tasks"></i> Tasks</a>
+                <a href="#" class="nav-item" data-target="requests"><i class="fas fa-bullhorn"></i> Requests</a>
+                <a href="#" class="nav-item" data-target="users"><i class="fas fa-users"></i> All Users</a>
+                <a href="#" class="nav-item" data-target="compost"><i class="fas fa-leaf"></i> Compost</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="btn btn-secondary"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1 id="pageTitle">Dashboard</h1>
+                <p id="welcomeMessage">Welcome, Admin!</p>
+            </header>
+
+            <section id="dashboard" class="content-section active">
+    <div class="stats-grid-top">
+        <div class="stat-card-lg color-green"><h4>TOTAL DONORS</h4><p id="stat-total-donors">0</p></div>
+        <div class="stat-card-lg color-blue"><h4>TOTAL RECEIVERS</h4><p id="stat-total-receivers">0</p></div>
+        <div class="stat-card-lg color-yellow"><h4>ACTIVE VOLUNTEERS</h4><p id="stat-active-volunteers">0</p></div>
+        <div class="stat-card-lg color-terracotta"><h4>MEALS SERVED</h4><p id="stat-meals-served">~0</p></div>
+    </div>
+    <div class="summary-grid">
+                    <div id="pendingApprovalsCard" class="summary-card">
+                        <h3>Pending Approvals</h3>
+                        <div class="approval-counts">
+                            <div class="approval-item"><p id="approval-volunteers">0</p><label>Volunteers</label></div>
+                            <div class="approval-item"><p id="approval-donors">0</p><label>Donors</label></div>
+                            <div class="approval-item"><p id="approval-recipients">0</p><label>Recipients</label></div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Recent Activity</h3>
+                        <div id="activity-list"><p>Loading activity...</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="approvals" class="content-section">
+                <h3>Pending User Approvals</h3>
+                <div id="pending-users-list" class="item-list"><p>Loading pending users...</p></div>
+            </section>
+
+            <section id="donations" class="content-section">
+                <h3>Pending Donations to be Assigned</h3>
+                <div id="pending-donations-list" class="item-list"><p>Loading pending donations...</p></div>
+            </section>
+
+            <section id="tasks" class="content-section">
+                <h3>Task Monitoring</h3>
+                <div id="all-tasks-list" class="item-list"><p>Loading all tasks...</p></div>
+            </section>
+
+            <section id="requests" class="content-section">
+                <h3>Open Food Requests</h3>
+                <div id="open-requests-list" class="item-list"><p>Loading open requests...</p></div>
+            </section>
+
+            <section id="users" class="content-section">
+                <h3>All Registered Users</h3>
+                <div class="filter-controls">
+                    <div class="form-group"><label for="filterUsersRole">Filter by Role</label><select id="filterUsersRole"><option value="">All Roles</option><option value="donor">Donor</option><option value="volunteer">Volunteer</option><option value="receiver">Receiver</option></select></div>
+                    <div class="form-group"><label for="filterUsersStatus">Filter by Status</label><select id="filterUsersStatus"><option value="">All Statuses</option><option value="approved">Approved</option><option value="pending">Pending</option><option value="rejected">Rejected</option></select></div>
+                </div>
+                <div id="all-users-list" class="item-list"><p>Loading all users...</p></div>
+            </section>
+
+            <section id="compost" class="content-section">
+                <h3>Compost Management</h3>
+                <div class="compost-grid">
+                    <div class="compost-card">
+                        <h4>Pending Collection</h4>
+                        <div id="compost-donations-list" class="item-list"><p>Loading compost donations...</p></div>
+                    </div>
+                    <div class="compost-card">
+                        <h4>Log a New Sale</h4>
+                        <form id="logSaleForm" class="form-card-condensed">
+                            <div class="form-group"><label for="buyerName">Buyer's Name</label><input type="text" id="buyerName" required></div>
+                            <div class="form-group"><label for="quantitySold">Quantity Sold (kg)</label><input type="number" id="quantitySold" min="1" required></div>
+                            <div class="form-group"><label for="revenue">Revenue Generated</label><input type="number" id="revenue" min="0" required></div>
+                            <button type="submit" class="btn btn-primary">Log Sale</button>
+                        </form>
+                    </div>
+                    <div class="compost-card full-width">
+                        <h4>Sales History</h4>
+                        <div id="compost-sales-history" class="item-list"><p>Loading sales history...</p></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <div id="userDetailsModal" class="modal">
+        <div class="modal-content"><header class="modal-header"><h2>User Details</h2><button class="close-btn">&times;</button></header><div class="modal-body"><p><strong>Name:</strong> <span id="modalUserName"></span></p><p><strong>Email:</strong> <span id="modalUserEmail"></span></p><p><strong>Role:</strong> <span id="modalUserRole"></span></p><p><strong>Status:</strong> <span id="modalUserStatus"></span></p></div><footer class="modal-footer"><button id="rejectUserBtn" class="btn btn-danger">Reject</button><button id="approveUserBtn" class="btn btn-primary">Approve</button></footer></div>
+    </div>
+    <div id="assignTaskModal" class="modal">
+        <div class="modal-content"><header class="modal-header"><h2>Assign Donation</h2><button class="close-btn">&times;</button></header><form id="assignTaskForm"><div class="modal-body"><h4>Donation Details</h4><p><strong>Donor:</strong> <span id="modalDonationDonor"></span></p><p><strong>Food:</strong> <span id="modalDonationDesc"></span></p><div class="form-group"><label for="volunteerSelect">Assign to Volunteer:</label><select id="volunteerSelect" required></select></div><div class="form-group"><label for="receiverSelect">Assign to Receiver:</label><select id="receiverSelect" required></select></div></div><footer class="modal-footer"><button type="submit" class="btn btn-primary">Confirm Assignment</button><button type="button" class="btn btn-secondary close-btn">Cancel</button></footer></form></div>
+    </div>
+    <div id="qualityCheckReportModal" class="modal">
+        <div class="modal-content"><header class="modal-header"><h2>Quality Check Report</h2><button class="close-btn">&times;</button></header><div class="modal-body"><p><strong>Food Quality:</strong> <span id="qc-food-quality"></span></p><p><strong>Packaging:</strong> <span id="qc-packaging"></span></p><p><strong>Remarks:</strong> <span id="qc-remarks"></span></p></div><footer class="modal-footer"><button class="btn btn-secondary close-btn">Close</button></footer></div>
+    </div>
+    
+    <div id="notification"></div>
+    <script src="js/adminDashboard.js"></script>
+    <script src="js/welcome.js"></script>
+</body>
+</html>

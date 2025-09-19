@@ -1,0 +1,105 @@
+/* --- ANNA SETU: LOGIN PAGE STYLES --- */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--color-background-soft);
+}
+
+.login-container {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+.brand-section {
+    margin-bottom: 30px;
+}
+
+.brand-section .logo {
+    margin: 0 auto 15px;
+    width: 100px;
+}
+
+.brand-section .logo img {
+    width: 100%;
+    height: auto;
+}
+
+.brand-section h1 {
+    color: var(--color-text-green);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.brand-section p {
+    color: var(--color-secondary);
+    font-size: 1rem;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-toggle-btn {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--color-secondary);
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+#loginBtn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.signup-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.signup-link a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Notification Styles */
+#notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: var(--color-white);
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#notification.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#notification.success {
+    background-color: #28a745;
+}
+
+#notification.error {
+    background-color: #dc3545;
+}

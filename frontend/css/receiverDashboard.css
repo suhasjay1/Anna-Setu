@@ -1,0 +1,47 @@
+/* --- ANNA SETU: RECEIVER DASHBOARD STYLES --- */
+@import url('theme.css');
+
+.dashboard-container { display: flex; min-height: 100vh; }
+.sidebar { width: 260px; background-color: var(--color-white); display: flex; flex-direction: column; padding: 20px; box-shadow: 2px 0 15px rgba(0,0,0,0.05); }
+.sidebar-header { text-align: center; margin-bottom: 30px; }
+.sidebar-logo { width: 80px; margin-bottom: 10px; }
+.sidebar-title { color: var(--color-text-green); font-size: 1.5rem; }
+.sidebar-nav { display: flex; flex-direction: column; gap: 10px; flex-grow: 1; }
+.nav-item { display: flex; align-items: center; gap: 15px; padding: 12px 15px; border-radius: 8px; text-decoration: none; color: var(--color-secondary); font-weight: 500; transition: background-color 0.3s, color 0.3s; }
+.nav-item:hover { background-color: var(--color-background-soft); color: var(--color-primary); }
+.nav-item.active { background-color: var(--color-primary); color: var(--color-white); }
+.sidebar-footer { margin-top: 20px; }
+.sidebar-footer .btn { width: 100%; }
+
+.main-content { flex-grow: 1; padding: 30px; }
+.main-header { margin-bottom: 30px; }
+.main-header h1 { color: var(--color-text-dark); font-size: 2rem; }
+.main-header p { color: var(--color-secondary); }
+
+.content-section { display: none; }
+.content-section.active { display: block; }
+
+.profile-card, .form-card { background: var(--color-white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); }
+
+.deliveries-container, .my-requests {
+    display: grid;
+    gap: 15px;
+}
+
+.delivery-card, .request-item {
+    background: var(--color-white);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid var(--color-accent);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.delivery-card p, .request-item p { margin: 0; }
+.delivery-card strong { color: var(--color-text-dark); }
+.delivery-card .meta-info { font-size: 0.9rem; color: var(--color-secondary); margin-top: 5px; }
+
+.requests-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}

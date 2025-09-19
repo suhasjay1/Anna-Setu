@@ -1,0 +1,60 @@
+@import url('theme.css');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: var(--color-background-soft);
+}
+
+.profile-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-header img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.profile-header h1 {
+    color: var(--color-text-green);
+}
+
+.profile-header p {
+    color: var(--color-secondary);
+}
+
+.form-card {
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.form-card h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-background-soft);
+    padding-bottom: 5px;
+}
+
+input:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}

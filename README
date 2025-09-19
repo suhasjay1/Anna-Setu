@@ -1,0 +1,64 @@
+# Anna Setu - Food Donation Platform
+
+Anna Setu is a full-stack web application designed to bridge the gap between food donors and community receivers. It provides a comprehensive platform for managing the entire food rescue lifecycle, coordinated by administrators and facilitated by a network of dedicated volunteers.
+
+---
+## ✨ Core Features
+
+The platform is built around four key user roles, each with a tailored dashboard and specific functionalities.
+
+### 🍽️ Donors
+* **Two Donor Types:** Supports both one-time **Instant Donors** and recurring **Regular Donors** (like restaurants or hotels).
+* **Schedule Pickups:** Donors can easily schedule a pickup for surplus food, specifying the type (for humans, animals, or compost), quantity, and pickup instructions.
+* **Track History:** A dedicated dashboard allows donors to view the status of their donations and see which volunteer has been assigned.
+
+### 🚚 Volunteers
+* **Task Management:** Volunteers have a dashboard to view and accept available delivery tasks.
+* **Status Updates:** They can update the status of a task in real-time (Accepted, Picked Up, Delivered).
+* **Quality Control:** A mandatory quality check form appears upon pickup, allowing volunteers to report on the food's condition and packaging.
+* **Training Hub:** An in-app training section provides essential guidelines on food safety and etiquette.
+
+### 🏠 Receivers
+* **Post Needs:** Verified organizations (like NGOs and shelters) can post requests for specific food items they need.
+* **Track Deliveries:** A dashboard shows them all upcoming deliveries that have been assigned to them.
+* **Confirm Receipt:** They can confirm when a donation has been successfully received, completing the donation cycle.
+
+### ⚙️ Admins
+* **Central Oversight:** A comprehensive dashboard with live statistics on users, donations, and platform activity.
+* **User Verification:** Admins are responsible for approving or rejecting all new Regular Donors, Volunteers, and Receivers.
+* **Logistics Coordination:** Admins assign pending donations to available volunteers for delivery to specific receivers.
+* **Compost Management:** A dedicated section to manage compost-specific donations and log revenue from compost sales.
+
+---
+## 🛠️ Technology Stack
+
+* **Frontend:** HTML5, CSS3, Vanilla JavaScript (ES6+)
+* **Backend:** Node.js, Express.js
+* **Database:** MongoDB with Mongoose
+* **Authentication:** JSON Web Tokens (JWT)
+
+---
+## 🚀 Getting Started
+
+### Prerequisites
+* Node.js and npm installed
+* MongoDB installed and running locally
+
+### Backend Setup
+1.  Navigate to the `backend` directory: `cd backend`
+2.  Install dependencies: `npm install`
+3.  Create a `.env` file and add your `MONGODB_URI`, `JWT_SECRET`, and a default `ADMIN_PASSWORD`.
+4.  Run the admin creation script (only once): `node create-admin.js`
+5.  Start the server: `node server.js`
+    * The backend will be running at `http://localhost:4000`.
+
+### Frontend Setup
+1.  Navigate to the `frontend` directory: `cd ../frontend`
+2.  Open the `login.html` file in your web browser. No extra installation is needed.
+
+---
+## 🔮 Future Enhancements
+* Real-time chat functionality for communication.
+* Search and advanced filtering on all admin lists.
+* Map integration for volunteers to view pickup and delivery locations.
+* A comprehensive analytics page for the admin.

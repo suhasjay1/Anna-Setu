@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Dashboard - Anna Setu</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/volunteerDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/logo.png" alt="Anna Setu Logo" class="sidebar-logo">
+                <h2 class="sidebar-title">VOLUNTEER</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-target="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                <a href="#" class="nav-item" data-target="tasks"><i class="fas fa-clipboard-list"></i> My Tasks</a>
+                <a href="#" class="nav-item" data-target="training"><i class="fas fa-book-open"></i> Training</a>
+                <a href="profile.html" class="nav-item"><i class="fas fa-user"></i> My Profile</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="btn btn-secondary"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1 id="pageTitle">Dashboard</h1>
+                <p id="welcomeMessage">Welcome, Volunteer!</p>
+            </header>
+
+            <section id="dashboard" class="content-section active">
+                <div class="stats-grid">
+                    <div class="stat-card"><h4>Tasks Completed</h4><p id="stat-tasks-completed">0</p></div>
+                    <div class="stat-card"><h4>Active Tasks</h4><p id="stat-active-tasks">0</p></div>
+                    <div class="stat-card"><h4>Meals Served (Est.)</h4><p id="stat-meals-served">0</p></div>
+                </div>
+                <div class="recent-deliveries">
+                    <h3>Your Recent Deliveries</h3>
+                    <div id="recent-deliveries-list" class="item-list">
+                        <p>Loading recent deliveries...</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="tasks" class="content-section">
+                <h3>New & Active Tasks</h3>
+                <div id="tasks-list" class="tasks-container">
+                    <p>Loading your assigned tasks...</p>
+                </div>
+            </section>
+            
+            <section id="training" class="content-section">
+                <h3>Volunteer Training & Resources</h3>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4><i class="fas fa-hands-wash"></i> Food Safety & Hygiene</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <h5>Key Principles</h5>
+                            <p>Your top priority is ensuring the food you handle remains safe to eat. Follow these guidelines strictly.</p>
+                            <ul>
+                                <li><strong>Handwashing:</strong> Wash your hands thoroughly with soap and water for at least 20 seconds before and after handling any food containers.</li>
+                                <li><strong>Temperature Control:</strong> Keep hot foods hot and cold foods cold. Transport them in insulated bags if possible and deliver them promptly. The "danger zone" for bacterial growth is between 4°C and 60°C.</li>
+                                <li><strong>Cross-Contamination:</strong> Never let raw meat or its juices come into contact with ready-to-eat foods.</li>
+                                <li><strong>Check for Spoilage:</strong> Do not collect or deliver any food that shows obvious signs of spoilage, such as mold, strange odors, or discoloration. Report this in your quality check.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4><i class="fas fa-box"></i> Packaging & Transport</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <h5>Best Practices</h5>
+                            <p>Proper handling during transport prevents spills and maintains food integrity.</p>
+                             <ul>
+                                <li><strong>Use Clean Containers:</strong> Only accept food that is packed in clean, sturdy, and food-grade containers.</li>
+                                <li><strong>Ensure Proper Sealing:</strong> Check that all lids are securely fastened to prevent leaks. Report any poorly sealed containers in your quality check.</li>
+                                <li><strong>Labeling:</strong> If possible, confirm with the donor if the food contains major allergens (like nuts, dairy, gluten) and that it's noted.</li>
+                                <li><strong>Secure in Vehicle:</strong> Place containers in a stable position in your vehicle (e.g., on the floor or in a box) to prevent them from tipping over during transit.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4><i class="fas fa-comments"></i> Donor & Receiver Etiquette</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                           <h5>Representing Anna Setu</h5>
+                           <p>You are the face of our organization. Professionalism and kindness are essential.</p>
+                            <ul>
+                                <li><strong>Be Punctual:</strong> Arrive at the scheduled pickup and delivery times. If you are running late, inform the contact person if a number is provided.</li>
+                                <li><strong>Introduce Yourself:</strong> Clearly state your name and that you are a volunteer with Anna Setu.</li>
+                                <li><strong>Be Courteous:</strong> Be polite, patient, and respectful in all your interactions. A simple "thank you" goes a long way.</li>
+                                <li><strong>Maintain Confidentiality:</strong> Respect the privacy of both the donors and the receivers. Do not share personal details or stories without permission.</li>
+                                <li><strong>Report Issues Professionally:</strong> If there are any issues (e.g., food quality concerns, communication problems), note them in your quality check remarks or contact an admin directly. Do not engage in arguments.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <div id="qualityCheckModal" class="modal">
+        </div>
+    
+    <div id="notification"></div>
+    <script src="js/volunteerDashboard.js"></script>
+    <script src="js/welcome.js"></script>
+</body>
+</html>

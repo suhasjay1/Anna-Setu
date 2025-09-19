@@ -1,0 +1,156 @@
+/* --- ANNA SETU: GLOBAL THEME --- */
+
+/* ## 1. Color Palette & Font Variables ## */
+:root {
+    --color-primary: #C77553;      /* Terracotta */
+    --color-secondary: #8BA1B7;     /* Dusty Blue */
+    --color-accent: #D4A52A;       /* Golden Yellow */
+    --color-text-dark: #3D2C20;   /* Deep Brown */
+    --color-text-green: #5F7449;    /* Muted Green */
+    --color-background-main: #F5F5F0; /* Off-White */
+    --color-background-soft: #EAEAEA;  /* Soft Gray */
+    --color-white: #FFFFFF;
+
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ## 2. Global Resets & Body Styles ## */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-background-main);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+/* ## 3. Reusable Components & Utility Classes ## */
+
+/* Main Container for Pages */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* General Button Styles */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: #b86649; /* Darker Terracotta */
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.btn-secondary:hover {
+    background-color: #7a92a8; /* Darker Dusty Blue */
+    transform: translateY(-2px);
+}
+
+/* General Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--color-text-green);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    background-color: var(--color-background-soft);
+    color: var(--color-text-dark);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(199, 117, 83, 0.2);
+}
+/* --- STYLES FOR WELCOME MODAL --- */
+.welcome-modal {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-modal-content {
+    background: var(--color-white);
+    padding: 30px 40px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 500px;
+    position: relative;
+    animation: fadeIn 0.5s;
+}
+
+.welcome-modal-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--color-secondary);
+    cursor: pointer;
+}
+
+.welcome-modal-content h3 {
+    color: var(--color-text-green);
+    margin-bottom: 15px;
+}
+
+.welcome-modal-content .quote {
+    font-style: italic;
+    color: var(--color-secondary);
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
